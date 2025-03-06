@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aisha&Iddin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#majlis" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-calendar"></i> MAJLIS</a>
+    <a href="#rsvp" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> RSVP</a>
+    <a href="#itinerary" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ATURCARA</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> INFO</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#majlis" class="w3-bar-item w3-button" onclick="toggleFunction()">MAJLIS</a>
+    <a href="#rsvp" class="w3-bar-item w3-button" onclick="toggleFunction()">RSVP</a>
+    <a href="#itinerary" class="w3-bar-item w3-button" onclick="toggleFunction()">ATURCARA</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">INFO</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div id="home" style="padding-top: 2pc; margin: 5pc;">
+  <div class="imgdiv fill"></div>
+  <div>
+    <h3 class="w3-center w3-padding-large hidden" style="padding-bottom: 10pc; margin-left: -4pc; margin-right: -4pc;">Undangan Hari Bahagia</h3>
+    <p class="lavishly-yours-regular drop" style="margin: -2pc;">Aisha</p>
+    <img class="fill" src="image/love_1.png" style="padding-bottom: -2pc; margin: -2pc;">
+    <p class="lavishly-yours-regular rise" style="padding-bottom: -3pc; margin: -2pc;">Izzuddin</p>
+  </div>
+  <h3 class="hidden" style="padding-bottom: 10pc; margin-left: -4pc; margin-right: -4pc;">
+    <p>Sabtu | 28 Jun 2025 </p>
+    <p>2 Muharram 1447 H</p>
+  </h3>
+</div>
+
+<div id="majlis" style="padding-top: 2pc; padding-bottom: 5pc; margin: 3pc;">
+    <h6 class="w3-center w3-padding-large"><em>ُبِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</em></h6>
+    <p>Dengan penuh kesyukuran ke Hadrat Ilahi, kami</p>
+    <h6 class="w3-center">Zamzuri Bin Abdul Kadir
+      <br>&</br>
+      Mazlita Binti Mokhtar
+      <br>serta</br>Mohd Ropidi Bin Mohd Noor
+      <br>&</br>
+      Noorlaili Binti Mohd Tohit
+    </h6>
+
+  <div class="w3-center">
+    <a>dengan segala hormatnya menjemput
+        <br>YB / Dato' / Datin / Tuan / Puan / Encik / Cik
+        <br>ke majlis perkahwinan Puteri dan Putera kami
+        <br>
+    </a>
+        <p class="cursive">Iman Aisha Binti Zamzuri
+        <br>&<br>
+        Muhammad Izzuddin Bin Mohd Ropidi</p>
+  </div>
+
+  <div class="w3-center">
+    <h5>Tarikh</h5>
+    <a> Sabtu, 28  Jun 2025 </a>
+    <h5>Masa</h5>
+    <a> 11:00 AM - 4:00 PM </a>
+    <h5>Tempat</h5>
+    <a> Menara Kumpulan RISDA
+      Jalan Ampang Ulu 3, 
+      Kampung Berembang, 
+      55000 Kuala Lumpur
+    </a>
+    <div class="w3-row">
+      <a href="https://waze.com/ul?q=Villa%20Rimba%20Flora%20Gombak,%20Jalan%20Gombak,%20Ulu%20Gombak,%20Selangor,%20Federal%20Territory%20of%20Kuala%20Lumpur,%20Malaysia&ll=3.3007441,101.7327513&navigate=yes">
+        <img class="w3-hover-opacity" width="100" src="image/waze.png" alt="">
+      </a>
+      <a href="https://maps.google.com/?q=Villa%20Rimba%20Flora%20Gombak,%20Jalan%20Gombak,%20Ulu%20Gombak,%20Selangor,%20Federal%20Territory%20of%20Kuala%20Lumpur,%20Malaysia">
+        <img class="w3-hover-opacity" width="100" src="image/google.png" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="rsvp" class="w3-center" style="padding-top: 2pc; padding-bottom: 5pc; margin: 3pc;">
+  <h5>Anda digalakkan untuk sahkan kehadiran melalui butang RSVP di bawah</h5>
+  <div class="w3-row w3-padding m4" style="padding: 1pc; margin-bottom: 5pc;">
+    <img class="w3-row" src="image/line.png">
+    <a class="w3-row" href="https://aliveinvite.com/cards/aiinxrahimi/rsvp_lists/new">
+      <img src="image/rsvp.jpg" width="100" alt="">
+    </a>
+    <img class="w3-row" src="image/line.png" style="transform: scaleY(-1);">
+  </div>
+</div>
+
+<div id="itinerary" style="padding-top: 3pc; padding-bottom: 5pc; margin: 0 auto; max-width: 600px;">
+  <span class="w3-xxlarge w3-text-black w3-wide">ATURCARA MAJLIS</span>
+  <div class="w3-center" style="padding-top: 3pc; padding-bottom: 5pc; margin: 0 auto; max-width: 275px;">
+    <table>
+      <tr>
+        <th colspan="2">25 Januari 2025</th> 
+      </tr>
+      <tr>
+        <td>11:00AM</td>
+        <td>Ketibaan tetamu</td>
+      </tr>
+      <tr>
+        <td>12:30PM</td>
+        <td>Perarakan masuk pasangan pengantin</td>
+      </tr>
+      <tr>
+        <td>1:00PM</td>
+        <td>Makan beradab dan sesi memotong kek</td>
+      </tr>
+      <tr>
+        <td>2:00PM</td>
+        <td>Sesi bergambar bersama tetamu</td>
+      </tr>
+      <tr>
+        <td>4:00PM</td>
+        <td>Majlis tamat</td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+
+<div id="contact" style="padding-top: 3pc; padding-bottom: 5pc; margin: 0 auto; max-width: 600px;">
+  <span class="w3-xxlarge w3-text-black w3-wide">INFO</span>
+
+  <div class="w3-row w3-padding m4" style="margin: 3pc;">
+    <div class="w3-col w3-padding-large plate">
+      MOHD FAHIMEY SAHAUDIN
+      <i class="w3-row">Ayah Pengantin Perempuan</i>
+      <a href="tel:60192189367" class="w3-col m6 fa fa-phone w3-hover-opacity"> Call </a>
+      <a href="https://wasap.my/60192189367" class="w3-col m6 fa fa-whatsapp w3-hover-opacity"> Whatsapp </a>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding m4" style="margin: 3pc;">
+    <div class="w3-col w3-padding-large plate">
+      EUSNI RAHAYU MOHD TOHIT
+      <i class="w3-row">Ibu Pengantin Perempuan</i>
+      <a href="tel:60192935970" class="w3-col m6 fa fa-phone w3-hover-opacity" > Call</a>
+      <a href="https://wasap.my/60192935970" class="w3-col m6 fa fa-whatsapp w3-hover-opacity" > Whatsapp </a>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding m4" style="margin: 3pc;">
+    <div class="w3-col w3-padding-large plate">
+      AINUL FARHAH
+      <i class="w3-row">Kakak Pengantin Perempuan</i>
+      <a href="tel:60176165017" class="w3-col m6 fa fa-phone w3-hover-opacity" > Call</a>
+      <a href="https://wasap.my/60176165017" class="w3-col m6 fa fa-whatsapp w3-hover-opacity" > Whatsapp </a>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding m4" style="margin: 3pc;">
+    <div class="w3-col w3-padding-large plate">
+      MUHAMMAD ADAM KHALIQ
+      <i class="w3-row">Adik Pengantin Perempuan</i>
+      <a href="tel:601111511398" class="w3-col m6 fa fa-phone w3-hover-opacity" > Call</a>
+      <a href="https://wasap.my/601111511398" class="w3-col m6 fa fa-whatsapp w3-hover-opacity" > Whatsapp </a>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding m4" style="margin: 3pc;">
+    <div class="w3-col w3-padding-large plate">
+      RAMZAN JALALUDIN
+      <i class="w3-row">Abang Pengantin Perempuan</i>
+      <a href="tel:60134681063" class="w3-col m6 fa fa-phone w3-hover-opacity" > Call</a>
+      <a href="https://wasap.my/60134681063" class="w3-col m6 fa fa-whatsapp w3-hover-opacity" > Whatsapp </a>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin: 3pc;">
+  <p class="passions-conflict-regular" style="margin: -4pc;">Counting</p>
+  <p class="passions-conflict-regular" style="padding-bottom: 4pc; margin: -4pc;">Days</p>
+  <div id="timer"></div>
+</div>
+<div class="we-center" style="padding: 5pc; margin: 0 auto; max-width: 600px;">
+  <p class="w3-center w3-padding-small "><em>ُبَارَكَ اللهُ لَكُماَ وَبَارَكَ عَلَيْكُماَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ </em></p>
+  <a class="w3-center w3-padding-small ">Ya Allah, berkatilah dan satukanlah hati kedua pasangan mempelai ini dengan iman, 
+    keyakinan dan tawakal kepadaMu, panjangkan umur mereka, lapangkanlah rezeki mereka, 
+    dekatlah mereka menuju kebaikan, jauhkanlah mereka dari keburukan, kurniakanlah mereka zuriat yang soleh dan solehah.
+  </a> 
+</div>
+
+<div style="margin: 3pc;">
+  <div class="container" style="padding-bottom: 5pc; margin: 0 auto; max-width: 600px;">
+    <form method="post" name="wishes-form">
+      <h4 class="cursive">Ucapan Buat Pasangan</h4>
+      <input type="text" name="name" placeholder="Nama"  required>
+      <textarea name="message" rows="7" required></textarea >
+      <input type="submit" value="Submit" id="submit">
+		</form>
+	</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-64">
+  <div class="w3-row w3-padding m4" style="padding: 1pc; margin-bottom: 5pc;">
+    <a href="#home"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  </div>
+  <audio id="music" class="w3-row" controls src="song.mp3" autoplay>Your browser does not support the audio element.</audio>
+  <!-- <audio id="music" controls autoplay>
+    <source src="song.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio> -->
+  
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

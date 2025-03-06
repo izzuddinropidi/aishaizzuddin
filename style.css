@@ -1,0 +1,314 @@
+@import url(https://www.w3schools.com/w3css/4/w3.css);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Cinzel|Fauna+One);
+@import url(https://fonts.googleapis.com/css?family=Charm);
+@import url(https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap);
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Georgia", sans-serif;}
+body, html {
+  height: 100%;
+  color: #000;
+  line-height: 1.8;
+}
+/*font*/
+.lavishly-yours-regular {
+  font-family: "Lavishly Yours", serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  font-style: normal;
+  font-size: 100px;
+}
+.passions-conflict-regular {
+  font-family: "Passions Conflict", serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  font-style: normal;
+  font-size: 100px;
+}
+
+
+/* image sizing */
+img {
+  position: center;
+  max-width: 100%;
+  padding: 10px;
+  margin: 0;
+  object-fit: cover;
+}
+
+.pic {
+    border-radius: 50%;
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 6px 10px 0 rgba(72, 67, 73, 0.2); /* this adds the "card" effect */
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f2def7;
+    line-height: 25px;
+  }
+
+.plate {
+  box-shadow: 0 6px 10px 0 rgba(72, 67, 73, 0.2); /* this adds the "card" effect */
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border-style: solid;
+  border-width: 5px;
+}
+
+
+div {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.imgdiv {
+  background-image: url('image/border_2.jpg');
+  background-repeat: no-repeat;
+  background-position: center center; 
+  background-size: 105vw 105vh;
+  width: 102vw; 
+  height: 102vh; 
+  position: fixed; 
+  top: 0px; 
+  left: 0px;
+  z-index: -1;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url(image/line.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url(image/line.png);
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url(image/line.png);
+  min-height: 400px;
+}
+
+#timer {
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: lato, serif;
+  font-size: .7em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.days, .hours, .minutes, .seconds {
+  display: inline-block;
+  padding: 5px;
+  width: 60px;
+  border-radius: 15px;
+  background: #d2b48c;
+}
+
+.numbers {
+  font-family: Cinzel, serif;
+  color: black;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+table, th, td {
+  border: 1px solid transparent;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0.75em;
+}
+
+th {
+  background-color: transparent;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+input{
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+textarea{
+	width: 100%;
+	padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+#submit{
+	border: none;
+	background-color: #d2b48c;
+	color: black;
+	width: 200px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+#submit:hover{
+	background-color: whitesmoke;
+}
+
+
+.w3-wide {font-family: Cinzel, serif; letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+.cursive {font-family: Charm, sans-serif; font-size: 20px;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1200px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    max-height: 100px;
+  }
+}
+
+@media only screen and (max-device-width: 650px) {
+  .imgdiv {
+    background-image: url('image/border_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background-size: 105vw 105vh;
+    width: 102vw; 
+    height: 102vh; 
+    position: fixed; 
+    top: 0px; 
+    left: 0px;
+    z-index: -1;
+  }
+
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    max-height: 100px;
+  }
+
+  #timer {
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: lato, serif;
+    font-size: .7em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 5px;
+    width: 60px;
+    border-radius: 15px;
+    background: #d2b48c;
+  }
+
+  .numbers {
+    font-family: Cinzel, serif;
+    color: black;
+    font-size: 2.5em;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-device-width: 370px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    max-height: 400px;
+  }
+
+  #timer {
+    color: black;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: lato, serif;
+    font-size: .7em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .days, .hours, .minutes, .seconds {
+    display: inline-block;
+    padding: 5px;
+    width: 60px;
+    border-radius: 15px;
+    background: #d2b48c;
+  }
+
+  .numbers {
+    font-family: Cinzel, serif;
+    color: black;
+    font-size: 2.5em;
+    text-align: center;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 3s;
+}
+
+.fill {
+  opacity: 0;
+  filter: blur(5px);
+  transform: scale(50%);
+  transition: all 3s;
+}
+
+.drop {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateY(-50%);
+  transition: all 3s;
+}
+
+.rise {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 3s;
+}
+
+.slide {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 3s;
+}
+
+.swish {
+  opacity: 1;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(100%);
+  transform: translate3d(0,0,0);
+  transform: scale3d(100%,100%,100%);
+}
+
