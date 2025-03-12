@@ -263,7 +263,7 @@ textarea{
   }
 }
 
-.hidden {
+.hide {
   opacity: 0;
   filter: blur(5px);
   transition: all 3s;
