@@ -106,16 +106,39 @@
   const majlisDiv = document.getElementById('majlis');
   const infoDiv = document.getElementById('itinerary');
   const contactDiv = document.getElementById('contact');
+  const respondDiv = document.getElementById('respond');
+
 
   exitButton.addEventListener('click', () => {
-      transitionElement.classList.add('exiting');
-
-      // Optional: Remove the element from the DOM after the transition completes
-      setTimeout(() => {
-          transitionElement.style.display = 'none'; // or transitionElement.remove();
-          homeDiv.classList.add('hidden');
-          majlisDiv.classList.remove('hidden');
-          infoDiv.classList.remove('hidden');
-          contactDiv.classList.remove('hidden');
-      }, 1500); // Match the transition duration (1.5s)
+    transitionElement.classList.add('exiting');
+    // Optional: Remove the element from the DOM after the transition completes
+    setTimeout(() => {
+        transitionElement.style.display = 'none'; // or transitionElement.remove();
+        homeDiv.classList.add('hidden');
+        majlisDiv.classList.remove('hidden');
+        infoDiv.classList.remove('hidden');
+        contactDiv.classList.remove('hidden');
+        respondDiv.classList.remove('hidden');
+    }, 1500); // Match the transition duration (1.5s)
   });
+
+//modal page
+  const modal = document.getElementById('rsvp');
+  const btn = document.getElementById('respond');
+  const span = document.querySelector('.close');
+
+  btn.onclick = function() {
+      modal.style.display = 'block';
+  }
+
+  if (span) { //checks if the close button exists
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = 'none';
+      }
+  }

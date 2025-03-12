@@ -263,6 +263,25 @@ textarea{
   }
 }
 
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #8becfd;
+  color: rgb(0, 0, 0);
+  padding: 5px 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensures the button is on top */
+}
+
+.floating-button:hover {
+  opacity: 0.3;
+  background-color: #587cc4;
+}
+
 .hide {
   opacity: 0;
   filter: blur(5px);
@@ -323,4 +342,45 @@ textarea{
 #transitionElement.exiting {
   opacity: 0;
   transform: translateY(-50px); /* Move the element up */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 50%; /* Center horizontally */
+  top: 50%; /* Center vertically */
+  transform: translate(-50%, -50%); /* Adjust for element's size */
+  width: 80%; /* Width relative to viewport */
+  max-width: 600px; /* Maximum width for larger screens */
+  height: auto; /* Allow content to determine height */
+  max-height: 90%; /* Maximum height, leaving some space */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(126, 238, 253, 0.568); /* Black w/ opacity */
+  padding: 20px; /* Add some padding around modal */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  position: relative;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
