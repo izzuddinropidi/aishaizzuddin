@@ -85,16 +85,37 @@
   audio.load();
 
 //from submit
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwut4fA1eFf0OHijmhBJ9DjnKszaONBZpKLHs-tEJVbZcnaVOoeS3l0fm4JnljXVmI/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwut4fA1eFf0OHijmhBJ9DjnKszaONBZpKLHs-tEJVbZcnaVOoeS3l0fm4JnljXVmI/exec'
 
-const form = document.forms['wishes-form']
+  const form = document.forms['wishes-form']
 
-form.addEventListener('submit', e => {
-  
-  e.preventDefault()
-  
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-  .then(response => alert("Thank you! Form is submitted" ))
-  .then(() => { window.location.reload(); })
-  .catch(error => console.error('Error!', error.message))
-})
+  form.addEventListener('submit', e => {
+    
+    e.preventDefault()
+    
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => alert("Thank you! Form is submitted" ))
+    .then(() => { window.location.reload(); })
+    .catch(error => console.error('Error!', error.message))
+  })
+
+//transition page
+  const exitButton = document.getElementById('exitButton');
+  const transitionElement = document.getElementById('transitionElement');
+  const homeDiv = document.getElementById('home');
+  const majlisDiv = document.getElementById('majlis');
+  const infoDiv = document.getElementById('itinerary');
+  const contactDiv = document.getElementById('contact');
+
+  exitButton.addEventListener('click', () => {
+      transitionElement.classList.add('exiting');
+
+      // Optional: Remove the element from the DOM after the transition completes
+      setTimeout(() => {
+          transitionElement.style.display = 'none'; // or transitionElement.remove();
+          homeDiv.classList.add('hidden');
+          majlisDiv.classList.remove('hidden');
+          infoDiv.classList.remove('hidden');
+          contactDiv.classList.remove('hidden');
+      }, 1500); // Match the transition duration (1.5s)
+  });
