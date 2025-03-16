@@ -85,9 +85,9 @@
   audio.load();
 
 //from submit
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwut4fA1eFf0OHijmhBJ9DjnKszaONBZpKLHs-tEJVbZcnaVOoeS3l0fm4JnljXVmI/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxtV3kpSDd-Xq_Ad-N53bOtbK-2zxhcGIxTAL0SElOpgGwe314NC9bG48RuCTfzgtARZA/exec'
 
-  const form = document.forms['wishes-form']
+  const form = document.forms['rsvp-form']
 
   form.addEventListener('submit', e => {
     
