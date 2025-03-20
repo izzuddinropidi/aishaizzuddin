@@ -148,24 +148,12 @@ th {
   border-bottom: 2px solid black;
 }
 
-input{
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 10px;
-  border-radius: 5px;
-  border: none;
-}
-textarea{
-	width: 100%;
-	padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
 #submit{
 	border: none;
 	background-color: #d2b48c;
 	color: black;
-	width: 200px;
+  max-width: 600px;
+	width: 100%;
 	margin-top: 10px;
 	border-radius: 5px;
 }
@@ -183,6 +171,15 @@ textarea{
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
     max-height: 100px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px; /* Set the desired font size */
   }
 }
 
@@ -229,6 +226,15 @@ textarea{
     font-size: 2.5em;
     text-align: center;
   }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: .2em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 16px; /* Set the desired font size */
+  }
 }
 
 @media only screen and (max-device-width: 370px) {
@@ -260,6 +266,15 @@ textarea{
     color: black;
     font-size: 2.5em;
     text-align: center;
+  }
+
+  input,
+  textarea {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 18px; /* Adjust font size for larger screens */
   }
 }
 
@@ -356,16 +371,16 @@ textarea{
   height: auto; /* Allow content to determine height */
   max-height: 90%; /* Maximum height, leaving some space */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgba(126, 238, 253, 0.568); /* Black w/ opacity */
+  background-color: rgb(126, 238, 253); /* Black w/ opacity */
   padding: 20px; /* Add some padding around modal */
   box-sizing: border-box; /* Include padding in width/height */
+  border-radius: 20px; 
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #94d4fa;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   position: relative;
 }

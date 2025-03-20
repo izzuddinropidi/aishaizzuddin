@@ -12,7 +12,7 @@
 <button id="respond" class="floating-button hidden fill">RSVP</button>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+<!-- <div class="w3-top">
   <div class="w3-bar" id="myNavbar">
     <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
       <i class="fa fa-bars"></i>
@@ -21,16 +21,16 @@
     <a href="#rsvp" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> RSVP</a>
     <a href="#itinerary" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> ATURCARA</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> INFO</a>
-  </div>
+  </div> -->
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+  <!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
     <a href="#majlis" class="w3-bar-item w3-button" onclick="toggleFunction()">MAJLIS</a>
     <a href="#rsvp" class="w3-bar-item w3-button" onclick="toggleFunction()">RSVP</a>
     <a href="#itinerary" class="w3-bar-item w3-button" onclick="toggleFunction()">ATURCARA</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">INFO</a>
   </div>
-</div>
+</div> -->
 
 <!-- First Parallax Image with Logo Text -->
 <div id="home" style="padding-top: 2pc; margin: 5pc;">
@@ -47,18 +47,22 @@
   </a></div>
 </div>
 
-//RSVP Form
+<!-- RSVP Form -->
 <div id="rsvp" class="modal">
   <span class="close">&times;</span>
-      <div class="container close" style="padding-bottom: 5pc; margin: 0 auto; max-width: 600px;">
-        <form class="w3-row" method="post" name="rsvp-form">
-          <p class="cursive">RSVP</p>
-          <input type="text" name="Nama" placeholder="Nama"  required>
-          <input type="text" name="Atas_Jemputan" placeholder="Jemputan"  required>
-          <input type="text" name="No_Tel" placeholder="No. Telefon"  required>
-          <input type="text" name="Pax" placeholder="Jumlah Kehadiran"  required>
-          <input type="text" name="Ucapan" required></input >
-          <input type="submit" value="Submit" id="submit">
+      <div class="modal-content" style="margin: 0 auto; max-width: 600px;">
+        <form class="w3-row flex" method="post" name="rsvp-form">
+            <div class="cursive row" style="font-size: 70px; margin-bottom: 10; margin-top: 0;">RSVP</div>
+            <div class="row">
+              <input type="text" name="Nama" placeholder="Nama"  required>
+              <input type="text" name="Atas_Jemputan" placeholder="Jemputan"  required>
+              <input type="text" name="No_Tel" placeholder="No. Telefon"  required>
+              <input type="text" name="Pax" placeholder="Jumlah Kehadiran"  required>
+            </div>
+              <label class="w3-row flex" for="Ucapan">Ucapan</label>
+              <textarea class="w3-row flex" name="Ucapan" rows="3"></textarea >
+            <input class="w3-row flex" type="submit" value="Submit" id="submit">
+          
         </form>
       </div>
 </div>

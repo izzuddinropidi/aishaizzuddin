@@ -34,27 +34,27 @@
 
     }, 1000);
 
-  // Change style of navbar on scroll
-  window.onscroll = function() {myFunction()};
-  function myFunction() {
-      var navbar = document.getElementById("myNavbar");
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-      } else {
-          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-      }
-  }
+  // // Change style of navbar on scroll
+  // window.onscroll = function() {myFunction()};
+  // function myFunction() {
+  //     var navbar = document.getElementById("myNavbar");
+  //     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  //         navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+  //     } else {
+  //         navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+  //     }
+  // }
 
   
-  // Used to toggle the menu on small screens when clicking on the menu button
-  function toggleFunction() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-      } else {
-          x.className = x.className.replace(" w3-show", "");
-      }
-  }
+  // // Used to toggle the menu on small screens when clicking on the menu button
+  // function toggleFunction() {
+  //     var x = document.getElementById("navDemo");
+  //     if (x.className.indexOf("w3-show") == -1) {
+  //         x.className += " w3-show";
+  //     } else {
+  //         x.className = x.className.replace(" w3-show", "");
+  //     }
+  // }
 
   // Observe the elements position at center
   const observer = new IntersectionObserver((entries) => {
@@ -86,17 +86,28 @@
 
 //from submit
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxtV3kpSDd-Xq_Ad-N53bOtbK-2zxhcGIxTAL0SElOpgGwe314NC9bG48RuCTfzgtARZA/exec'
-
   const form = document.forms['rsvp-form']
+  const submitButton = form.querySelector('input[type="submit"]');
 
   form.addEventListener('submit', e => {
     
     e.preventDefault()
+
+    submitButton.disabled = true; // Disable immediately
     
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => alert("Thank you! Form is submitted" ))
-    .then(() => { window.location.reload(); })
-    .catch(error => console.error('Error!', error.message))
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+            alert("Thank you! Form is submitted");
+            window.location.reload();
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            alert("An error occurred. Please try again.");
+            submitButton.disabled = false; // Re-enable on error
+        })
+        .finally(() => {
+          submitButton.disabled = false; //re-enable the button.
+        });
   })
 
 //transition page
